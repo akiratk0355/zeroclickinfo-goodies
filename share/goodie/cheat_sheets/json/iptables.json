@@ -1,0 +1,64 @@
+{
+    "id": "iptables_cheat_sheet",
+    "name": "Iptables",
+    "description": "Administration tool for IPv4/IPv6 packet filtering and NAT",
+
+    "metadata": {
+        "sourceName": "Netfilter",
+        "sourceUrl" : "http://ipset.netfilter.org/iptables.man.html"
+    },
+
+    "aliases": [
+        "ip6tables", "iptable", "linux firewall"
+    ],
+
+    "template_type": "terminal",
+
+    "section_order": [
+        "Basic Commands",
+	"Targets",
+	"Tables",
+	"Basic Parameters",
+	"Examples",
+	"Extensions"
+    ],
+
+    "sections": {
+        "Basic Commands": [
+            {
+                "key": "sudo iptables -L [chain] -v -n",
+                "val": "List all rules in the selected chain with verbose and numeric output"
+            }
+        ],
+	"Targets": [
+	    {
+		"key": "-j targetname",
+		"val": "Target specification"
+	    }
+	],
+	"Tables" : [
+	    {
+		"key": "-t tablename",
+		"val": "Table specification"
+	    }
+	],
+	"Basic Parameters" : [
+	    {
+		"key": "-p protocol",
+		"val": "Protocol specification"
+	    }
+	],
+	"Extensions" : [
+	    {
+		"key": "-m iprange  --src-range x.x.x.x-x.x.x.x",
+		"val": "Match source IP in the specified range"
+	    }
+	],
+	"Examples" : [
+	    {
+		"key": "sudo iptables -A INPUT -p tcp -m iprange --src-range x.x.x.x-x.x.x.x --dport 22 -j ACCEPT",
+		"val": "Allow incoming traffic on SSH from IP in the specified range"
+	    }
+	]
+    }
+}
