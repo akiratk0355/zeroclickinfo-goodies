@@ -18,7 +18,7 @@
         "Basic Commands",
 	"Tables",
 	"Targets",
-	"Basic Parameters",
+	"Parameters",
 	"Matches",
 	"Examples"
     ],
@@ -26,28 +26,40 @@
     "sections": {
         "Basic Commands": [
             {
-                "key": "sudo iptables -L \\[chain\\] -v -n",
-                "val": "List all rules in the selected chain with verbose and numeric output"
+                "key": "sudo iptables -L -v -n",
+                "val": "List all rules with verbose and numeric output"
             },
 	    {
-		"key": "sudo iptables -S \\[chain\\]",
-		"val": "Print all rules in the selected chain"
+		"key": "sudo iptables -S",
+		"val": "Print all rules in iptables-save formant"
 	    },
 	    {
-		"key": "sudo iptables -A chain rule-specification",
+		"key": "sudo iptables -A <chain> <rule>",
 		"val": "Append one or more rules to the end of the selected chain"
 	    },
 	    {
-		"key": "sudo iptables -I chain \\[rulenum\\] rule-specification",
+		"key": "sudo iptables -I <chain> <rulenum> <rule>",
 		"val": "Insert one or more rules in the selected chain as the given rule number"
 	    },
 	    {
-		"key": "sudo iptables -D chain rulenum",
+		"key": "sudo iptables -D <chain> <rulenum>",
 		"val": "Delete one or more rules at the given position from the selected chain"
 	    },
 	    {
-		"key": "sudo iptables -P chain target",
+		"key": "sudo iptables -P <chain> <target>",
 		"val": "Set the policy for the chain to the given target"
+	    },
+	    {
+		"key": "sudo iptables -N <chain>",
+		"val": "Create a new user-defined chain by the given name"
+	    },
+	    {
+		"key": "sudo iptables -F <chain>",
+		"val": "Flush the selected chain"
+	    },
+	    {
+		"key": "sudo iptables -X <chain>",
+		"val": "Delete the optional user-defined chain specified"
 	    },
 	    {
 		"key": "sudo iptables-persistent save",
@@ -58,19 +70,20 @@
 		"val": "Save current rules for Debian 8/Ubuntu 16.04"
 	    }
         ],
-	"Targets": [
-	    {
-		"key": "-j targetname \\[per-target-options\\]",
-		"val": "Target specification"
-	    }
-	],
 	"Tables" : [
 	    {
 		"key": "-t tablename",
 		"val": "Table specification"
 	    }
 	],
-	"Basic Parameters" : [
+	"Targets": [
+	    {
+		"key": "-j targetname \\[per-target-options\\]",
+		"val": "Target specification"
+	    }
+	],
+
+	"Parameters" : [
 	    {
 		"key": "-p protocol",
 		"val": "Protocol specification"
