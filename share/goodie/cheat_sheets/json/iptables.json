@@ -82,15 +82,39 @@
 	],
 	"Targets": [
 	    {
-		"key": "-j targetname \\[per-target-options\\]",
-		"val": "Target specification"
+		"key": "-j ACCEPT",
+		"val": "Let the packet through"
+	    },
+	    {
+		"key": "-j DROP",
+		"val": "Silently ignore the packet"
+	    },
+	    {
+		"key": "-j REJECT",
+		"val": "Reject the packet and notify the sender"
+	    },
+	    {
+		"key": "-j LOG",
+		"val": "Turn on kernel logging of matching packets and continue traversing the current chain"
 	    }
 	],
 
 	"Parameters" : [
 	    {
-		"key": "-p protocol",
+		"key": "-p <protocol>",
 		"val": "Protocol specification"
+	    },
+	    {
+		"key": "-s x.x.x.x\\[/<mask>\\]",
+		"val": "Source address specification"
+	    },
+	    {
+		"key": "-d x.x.x.x\\[/<mask>\\]",
+		"val": "Destination address specification"
+	    },
+	    {
+		"key": "-i <interface>",
+		"val": "Interface specification"
 	    }
 	],
 	"Matches" : [
