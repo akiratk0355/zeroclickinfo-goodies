@@ -19,8 +19,7 @@
 	"Tables",
 	"Targets",
 	"Parameters",
-	"Matches",
-	"Examples"
+	"Matches"
     ],
 
     "sections": {
@@ -157,12 +156,6 @@
 	    {
 		"key": "-m connlimit --connlimit-upto n",
 		"val": "Restrict the number of parallel connections to a server per client IP address (or client address block)"
-	    }
-	],
-	"Examples" : [
-	    {
-		"key": "sudo iptables -A INPUT -p tcp -m iprange --src-range x.x.x.x-x.x.x.x --dport 22 -j ACCEPT",
-		"val": "Allow incoming traffic on SSH from IP in the specified range"
 	    }
 	]
     }
