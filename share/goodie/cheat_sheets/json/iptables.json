@@ -61,12 +61,16 @@
 		"val": "Delete the optional user-defined chain specified"
 	    },
 	    {
-		"key": "sudo iptables-persistent save",
-		"val": "Save current rules for Debian/Ubuntu"
+		"key": "sudo iptables-save > /path/to/file",
+		"val": "Save current rules"
 	    },
 	    {
-		"key": "sudo netfilter-persistent save",
-		"val": "Save current rules for Debian 8/Ubuntu 16.04"
+		"key": "sudo iptables-restore < /path/to/file",
+		"val": "Load rules from a file"
+	    },
+	    {
+		"key": "sudo iptables-persistent save",
+		"val": "Save current rules for Debian/Ubuntu"
 	    }
         ],
 	"Tables" : [
