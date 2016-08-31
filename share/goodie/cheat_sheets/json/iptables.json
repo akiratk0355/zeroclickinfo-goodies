@@ -72,9 +72,13 @@
         ],
 	"Tables" : [
 	    {
-		"key": "-t tablename",
-		"val": "Table specification"
-	    }
+		"key": "-t filter",
+		"val": "Default table containing three built-in chains: \"INPUT\", \"FORWARD\", and \"OUTPUT\""
+	    },
+	    {
+		"key": "-t nat",
+		"val": "Table for NAT (Network Address Translation) containing three built-in chains: \"PREROUTING\", \"OUTPUT\", and \"POSTROUTING\""
+	    },
 	],
 	"Targets": [
 	    {
