@@ -102,19 +102,23 @@
 	"Parameters" : [
 	    {
 		"key": "-p <protocol>",
-		"val": "Protocol specification"
-	    },
-	    {
-		"key": "-s x.x.x.x\\[/<mask>\\]",
-		"val": "Source address specification"
-	    },
-	    {
-		"key": "-d x.x.x.x\\[/<mask>\\]",
-		"val": "Destination address specification"
+		"val": "Specify the protocol of the rule or of the packet to check"
 	    },
 	    {
 		"key": "-i <interface>",
-		"val": "Interface specification"
+		"val": "Specify an interface via which a packet was received"
+	    },
+	    {
+		"key": "-m <matchname> \\[<per-match-options>\\]",
+		"val": "Specify extended packet matching modules"
+	    },
+	    {
+		"key": "-s x.x.x.x\\[/<mask>\\]",
+		"val": "Specify a source IP address"
+	    },
+	    {
+		"key": "-d x.x.x.x\\[/<mask>\\]",
+		"val": "Specify a destination IP address"
 	    }
 	],
 	"Matches" : [
