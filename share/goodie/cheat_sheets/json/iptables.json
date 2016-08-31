@@ -71,34 +71,42 @@
         ],
 	"Tables" : [
 	    {
-		"key": "-t filter",
+		"key": "filter",
 		"val": "Default table containing three built-in chains: \"INPUT\", \"FORWARD\", and \"OUTPUT\""
 	    },
 	    {
-		"key": "-t nat",
-		"val": "Table for NAT (Network Address Translation) containing three built-in chains: \"PREROUTING\", \"OUTPUT\", and \"POSTROUTING\""
+		"key": "nat",
+		"val": "Table for NAT containing three built-in chains: \"PREROUTING\", \"OUTPUT\", and \"POSTROUTING\""
 	    }
 	],
 	"Targets": [
 	    {
-		"key": "-j ACCEPT",
+		"key": "ACCEPT",
 		"val": "Let the packet through"
 	    },
 	    {
-		"key": "-j DROP",
+		"key": "DROP",
 		"val": "Silently ignore the packet"
 	    },
 	    {
-		"key": "-j REJECT",
+		"key": "REJECT",
 		"val": "Reject the packet and notify the sender"
 	    },
 	    {
-		"key": "-j LOG",
+		"key": "LOG",
 		"val": "Turn on kernel logging of matching packets and continue traversing the current chain"
 	    }
 	],
 
 	"Parameters" : [
+	    {
+		"key": "-t <table>",
+		"val": "Specify the packet matching table"
+	    },
+	    {
+		"key": "-j <target>",
+		"val": "Specify the target of the rule"
+	    },
 	    {
 		"key": "-p <protocol>",
 		"val": "Specify the protocol of the rule or of the packet to check"
