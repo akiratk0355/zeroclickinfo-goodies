@@ -123,8 +123,40 @@
 	],
 	"Matches" : [
 	    {
-		"key": "-m iprange  --src-range x.x.x.x-x.x.x.x",
+		"key": "-m iprange --src-range x.x.x.x-x.x.x.x",
 		"val": "Match source IP in the specified range"
+	    },
+	    {
+		"key": "-m iprange --dst-range x.x.x.x-x.x.x.x",
+		"val": "Match destination IP in the specified range"
+	    },
+	    {
+		"key": "-p tcp --sport port\\[:port\\]",
+		"val": "Match source port or port range"
+	    },
+	    {
+		"key": "-p tcp --dport port\\[:port\\]",
+		"val": "Match destination port or port range"
+	    },
+	    {
+		"key": "-m multiport --sports <port>\\[,<port>|,<port>:<port>\\]...",
+		"val": "Match if the source port is one of the given ports"
+	    },
+	    {
+		"key": "-m multiport --dports <port>\\[,<port>|,<port>:<port>\\]...",
+		"val": "Match if the destination port is one of the given ports"
+	    },
+	    {
+		"key": "-m mac --mac-source XX:XX:XX:XX:XX:XX",
+		"val": "Match source MAC address"
+	    },
+	    {
+		"key": "-m conntrack --ctstate <state>\\[,<state>\\]... ",
+		"val": "Match the state of a packet"
+	    },
+	    {
+		"key": "-m connlimit --connlimit-upto n",
+		"val": "Restrict the number of parallel connections to a server per client IP address (or client address block)"
 	    }
 	],
 	"Examples" : [
