@@ -78,7 +78,7 @@
 	    {
 		"key": "-t nat",
 		"val": "Table for NAT (Network Address Translation) containing three built-in chains: \"PREROUTING\", \"OUTPUT\", and \"POSTROUTING\""
-	    },
+	    }
 	],
 	"Targets": [
 	    {
